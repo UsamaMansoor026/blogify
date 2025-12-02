@@ -50,7 +50,7 @@ const Register = () => {
 
         {/*  */}
         <p className="text-sm">
-          Don't have an account?{" "}
+          Already have an account?{" "}
           <Link to="/auth/login" className="underline">
             Login here
           </Link>

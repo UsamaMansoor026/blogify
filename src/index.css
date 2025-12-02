@@ -9,12 +9,45 @@
   --color-card: #202020;
   --color-accent: #003459;
   --color-accent-hover: #01243e;
+  --color-nav: #1c1619;
 
   --font-roboto: "Roboto", sans-serif;
 }
 
 body {
-  background-color: var(--color-background);
+  background: var(--color-background);
+  background: linear-gradient(
+    90deg,
+    rgb(38, 14, 23) 0%,
+    rgba(11, 9, 10, 1) 50%,
+    rgba(30, 15, 34, 1) 100%
+  );
   color: var(--color-primary);
   font-family: var(--font-roboto), sans-serif;
+}
+
+.custom-shadow {
+  box-shadow: 0 2px 1px rgba(255, 255, 255, 0.3);
+}
+
+.global-padding {
+  @apply px-4 md:px-8 lg:px-20;
+}
+
+.tox
+  .tox-collection--list
+  .tox-collection__item--active:not(.tox-collection__item--state-disabled),
+.tox .tox-collection--list .tox-collection__item {
+  background-color: var(--color-nav) !important;
+  margin-block: 4px;
+}
+
+@media (width <= 505px) {
+  .custom-grid-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .blog-title {
+    font-size: 17px !important;
+  }
 }
