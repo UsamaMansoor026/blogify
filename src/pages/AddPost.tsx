@@ -54,7 +54,7 @@ const AddPost = () => {
             type="submit"
             className="w-full bg-accent py-2 rounded-md text-lg font-medium duration-200 cursor-pointer hover:bg-accent/90 hover:shadow-sm hover:shadow-primary/20"
           >
-            Post Blog
+            Submit Post
           </button>
         </div>
       </form>

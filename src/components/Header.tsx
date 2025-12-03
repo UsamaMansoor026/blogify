@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "./ui/Logo";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import UserProfileIcon from "./UserProfileIcon";
 
 const Header = () => {
   const location = useLocation();
@@ -19,6 +20,9 @@ const Header = () => {
       window.removeEventListener("resize", trackWindowWidth);
     };
   }, []);
+
+  /* Dummy Situation */
+  const user = null;
 
   return (
     <header className="custom-shadow fixed w-full py-4 global-padding flex items-center justify-between z-50 bg-nav">
@@ -39,7 +43,7 @@ const Header = () => {
               location.pathname === "/add-post" ? "underline" : ""
             }`}
           >
-            <Link to="/add-post">Add Blog</Link>
+            <Link to="/add-post">Add Post</Link>
           </li>
           <li
             className={`font-medium duration-200 hover:underline ${
@@ -65,7 +69,7 @@ const Header = () => {
                 location.pathname === "/add-post" ? "underline" : ""
               }`}
             >
-              <Link to="/add-post">Add Blog</Link>
+              <Link to="/add-post">Add Post</Link>
             </li>
             <li
               className={`font-medium duration-200 hover:underline ${
@@ -86,12 +90,16 @@ const Header = () => {
         </div>
 
         {/* Login Button */}
-        <Link
-          to="/auth/login"
-          className="px-8 py-2 bg-accent text-primary font-medium rounded-md duration-200 hover:bg-accent-hover"
-        >
-          Login
-        </Link>
+        {user ? (
+          <UserProfileIcon />
+        ) : (
+          <Link
+            to="/auth/login"
+            className="px-8 py-2 bg-accent text-primary font-medium rounded-md duration-200 hover:bg-accent-hover"
+          >
+            Login
+          </Link>
+        )}
       </nav>
     </header>
   );

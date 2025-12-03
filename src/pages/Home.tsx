@@ -1,30 +1,7 @@
 import { Link } from "react-router-dom";
-import {
-  blogsData,
-  users,
-  type BlogInterface,
-  type UserInterface,
-} from "../assets";
+import { blogsData, type BlogInterface } from "../assets";
 import SearchBox from "../components/SearchBox";
-
-const fetchAuthorDetails = (authorId: string) => {
-  const authorDetail: UserInterface | undefined = users.find(
-    (user) => user.id === authorId
-  );
-
-  if (authorDetail) {
-    return (
-      <div className="flex items-center gap-2 p-3">
-        <img
-          src={authorDetail.avatar_url}
-          alt={authorDetail.username}
-          className="w-10 h-10 object-cover rounded-full"
-        />
-        <h2 className="text-secondary">{authorDetail.username}</h2>
-      </div>
-    );
-  }
-};
+import AuthorDetails from "../components/ui/AuthorDetails";
 
 const Home = () => {
   return (
@@ -64,7 +41,7 @@ const Home = () => {
             </div>
 
             {/* Author details */}
-            {fetchAuthorDetails(blog.authorId)}
+            <AuthorDetails authorId={blog.authorId} />
 
             {/* Read more button */}
             <Link
