@@ -42,6 +42,18 @@ body {
   margin-block: 4px;
 }
 
+.nav_links {
+  list-style: none;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+
 @media (width <= 505px) {
   .custom-grid-container {
     grid-template-columns: 1fr !important;

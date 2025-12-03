@@ -45,8 +45,27 @@ export const blogsData: BlogInterface[] = [
     id: "blog1",
     authorId: "user-1",
     thumbnail: blogPost1,
-    content:
-      "This article explores the latest trends in artificial intelligence for 2024...",
+    content: `
+      <h2>The Rise of Artificial Intelligence in 2024</h2>
+      <p>
+        Artificial Intelligence continues to evolve rapidly, bringing new opportunities
+        and challenges. In 2024, companies are focusing more on <strong>ethical AI</strong>,
+        automation and smarter decision-making systems.
+      </p>
+
+      <h3>Key Trends</h3>
+      <ul>
+        <li>Generative AI for content and automation.</li>
+        <li>AI-assisted healthcare diagnostics.</li>
+        <li>Edge AI enabling faster on-device processing.</li>
+      </ul>
+
+      <p>
+        Businesses adopting AI early will gain a strong competitive advantage.
+        As the technology grows, we can expect more seamless integrations
+        in daily life.
+      </p>
+    `,
     category: "Technology",
     title: "The Future of AI: Trends to Watch in 2024",
     slug: "the-future-of-ai-trends-to-watch-in-2024",
@@ -55,12 +74,30 @@ export const blogsData: BlogInterface[] = [
     totalLikes: 1,
     likes: ["user-1"],
   },
+
   {
     id: "blog2",
     authorId: "user-2",
     thumbnail: blogPost2,
-    content:
-      "This article delves into the various applications of blockchain technology beyond cryptocurrencies...",
+    content: `
+      <h2>Blockchain Beyond Cryptocurrency</h2>
+      <p>
+        Blockchain is no longer limited to Bitcoin. Modern industries are exploring
+        how distributed ledger technology can improve transparency and security.
+      </p>
+
+      <h3>Popular Use Cases</h3>
+      <ol>
+        <li><strong>Supply Chain Tracking</strong> – Companies track products from origin to delivery.</li>
+        <li><strong>Digital Identity</strong> – Secure identity verification without central authorities.</li>
+        <li><strong>Healthcare</strong> – Safe exchange of medical records.</li>
+      </ol>
+
+      <p>
+        As adoption grows, blockchain will support decentralized apps,
+        enterprise tools and more secure transactions across industries.
+      </p>
+    `,
     category: "Technology",
     title: "Blockchain Beyond Cryptocurrency: Emerging Applications",
     slug: "blockchain-beyond-cryptocurrency-emerging-applications",

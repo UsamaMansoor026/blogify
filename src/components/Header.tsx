@@ -30,7 +30,7 @@ const Header = () => {
 
       <nav className="flex flex-row-reverse md:flex-row items-center gap-4">
         {/* Links */}
-        <ul className="hidden md:flex items-center gap-4">
+        <ul className="nav_links hidden md:flex items-center gap-4">
           <li
             className={`font-medium duration-200 hover:underline ${
               location.pathname === "/" ? "underline" : ""
@@ -56,7 +56,7 @@ const Header = () => {
 
         {/* Mobile Nav Links */}
         {showMobNav && (
-          <ul className="flex md:hidden flex-col gap-4 absolute left-0 top-full bg-nav w-full items-start px-5 py-3 text-lg">
+          <ul className="nav_links flex md:hidden flex-col gap-4 absolute left-0 top-full bg-nav w-full items-start px-5 py-3 text-lg">
             <li
               className={`font-medium duration-200 hover:underline ${
                 location.pathname === "/" ? "underline" : ""

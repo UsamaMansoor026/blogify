@@ -34,7 +34,10 @@ const PostDetails = () => {
       <div className="mt-6">
         <p className="text-sm text-secondary mb-6">{post.date}</p>
         <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-        <p className="text-base leading-7">{post.content}</p>
+        <p
+          className="text-base leading-7"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        ></p>
       </div>
     </section>
   );
